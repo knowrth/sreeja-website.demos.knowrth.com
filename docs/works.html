@@ -61,11 +61,23 @@
     menuBtn?.addEventListener('click', toggleMenu);
   </script>
 
-<main class='py-16 bg-gray-50'>
+<main class=' bg-gray-50'>
+  <div class="relative h-48 sm:h-56 lg:h-72  overflow-hidden mb-10">
+      <img
+        src="images/carsouel1.jpeg"
+        alt="Our Works banner"
+        class="absolute inset-0 w-full h-full object-cover grayscale opacity-60"/>
+      <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-black/10 pointer-events-none"></div>
+
+      <div class="absolute inset-0 flex items-center justify-center text-center px-4">
+        <h2 class=" text-3xl brand-purple-text sm:text-2xl font-semibold drop-shadow">
+          Our Works
+        </h2>
+      </div>
+  </div>
   <div class='max-w-7xl mx-auto px-4 md:px-6 lg:px-8'>
-    <h2 class='text-3xl font-semibold brand-purple-text mb-8 text-center'>Our Works</h2>
-    <div class='columns-1 sm:columns-2 lg:columns-3 gap-4 [column-fill:_balance]'>
-      <img src='images/img1.jpeg' class='mb-4 w-full rounded-lg shadow' alt='work1'/>
+    <!-- <h2 class='text-3xl font-semibold  mb-8 text-center'>Our Works</h2> -->
+     <!-- <img src='images/img1.jpeg' class='mb-4 w-full rounded-lg shadow' alt='work1'/>
       <img src='images/img2.jpeg' class='mb-4 w-full rounded-lg shadow' alt='work2'/>
       <img src='images/img3.jpeg' class='mb-4 w-full rounded-lg shadow' alt='work3'/>
       <img src='images/img4.jpeg' class='mb-4 w-full rounded-lg shadow' alt='work4'/>
@@ -73,13 +85,198 @@
       <img src='images/img1.jpeg' class='mb-4 w-full rounded-lg shadow' alt='work6'/>
       <img src='images/img2.jpeg' class='mb-4 w-full rounded-lg shadow' alt='work7'/>
       <img src='images/img3.jpeg' class='mb-4 w-full rounded-lg shadow' alt='work8'/>
-      <img src='images/img4.jpeg' class='mb-4 w-full rounded-lg shadow' alt='work9'/>
-    </div>
+      <img src='images/img4.jpeg' class='mb-4 w-full rounded-lg shadow' alt='work9'/> -->
+    <!-- <div class='columns-1 sm:columns-2 lg:columns-3 gap-4 [column-fill:_balance]'>
+      
+      <div class="grid grid-cols-4 grid-rows-12 gap-4">
+    <div class="row-span-2">1</div>
+    <div class="row-span-2 col-start-1 row-start-3">2</div>
+    <div class="row-span-2 col-start-1 row-start-5">3</div>
+    <div class="row-span-4 col-start-1 row-start-7"><img src='images/work1.jpeg' class='mb-4 w-full rounded-lg shadow' alt='work2'/></div>
+    <div class="row-span-2 col-start-1 row-start-11">5</div>
+    <div class="row-span-5 col-start-2 row-start-1"><img src='images/work2.jpeg' class='mb-4 w-full rounded-lg shadow' alt='work2'/></div>
+    <div class="row-span-2 col-start-2 row-start-6">7</div>
+    <div class="row-span-5 col-start-2 row-start-8"><img src='images/work.jpeg' class='mb-4 w-full rounded-lg shadow' alt='work2'/></div>
+    <div class="row-span-3 col-start-3 row-start-1"><img src='images/work3.jpeg' class='mb-4 w-full rounded-lg shadow' alt='work2'/></div>
+    <div class="row-span-2 col-start-3 row-start-4">10</div>
+    <div class="row-span-2 col-start-3 row-start-6">11</div>
+    <div class="row-span-5 col-start-3 row-start-8"><img src='images/work4.jpeg' class='mb-4 w-full rounded-lg shadow' alt='work2'/></div>
+    <div class="row-span-2 col-start-4 row-start-1">13</div>
+    <div class="row-span-5 col-start-4 row-start-3"><img src='images/work5.jpeg' class='mb-4 w-full rounded-lg shadow' alt='work2'/></div>
+    <div class="row-span-2 col-start-4 row-start-8">15</div>
+    <div class="row-span-3 col-start-4 row-start-10"><img src='images/work6.jpeg' class='mb-4 w-full rounded-lg shadow' alt='work2'/></div>
+</div>
+    </div> -->
+    <!-- Works Masonry -->
+<div class="mx-auto max-w-[1600px] px-4 md:px-6 lg:px-8 py-10">
+
+  <!-- Responsive columns: sm:2, lg:4, xl:3  -->
+  <div class="grid gap-4 grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 auto-rows-[10px]">
+
+    <!-- Col 1 (like your 1–5 stack) -->
+    <figure class="relative row-[span_10/span_10] overflow-hidden rounded-xl shadow break-inside-avoid">
+  <img src="images/work1.jpeg" alt="Work 1" class="w-full h-full object-cover">
+
+  <!-- Text on the image -->
+  <figcaption
+    class="absolute left-3 bottom-3 text-black text-sm sm:text-base font-semibold drop-shadow-md pointer-events-none">
+    Work 1
+  </figcaption>
+</figure>
+    <figure class="relative row-[span_25/span_25] overflow-hidden rounded-xl shadow break-inside-avoid">
+      <img src="images/work1.jpeg" alt="" class="w-full h-full object-cover">
+      <figcaption
+    class="absolute left-3 bottom-3 text-black text-sm sm:text-base font-semibold drop-shadow-md pointer-events-none">
+    Work 2
+  </figcaption>
+    </figure>
+    <figure class="relative row-[span_15/span_15] overflow-hidden rounded-xl shadow break-inside-avoid">
+      <img src="images/work2.jpeg" alt="" class="w-full h-full object-cover">
+      <figcaption
+    class="absolute left-3 bottom-3 text-black text-sm sm:text-base font-semibold drop-shadow-md pointer-events-none">
+    Work 3
+  </figcaption>
+    </figure>
+    <!-- <figure class="row-[span_20/span_20] overflow-hidden rounded-xl shadow break-inside-avoid">
+      <img src="images/work2.jpeg" alt="" class="w-full h-full object-cover">
+    </figure> -->
+    <figure class="relative row-[span_10/span_10] overflow-hidden rounded-xl shadow break-inside-avoid">
+      <img src="images/work3.jpeg" alt="" class="w-full h-full object-cover">
+      <figcaption
+    class="absolute left-3 bottom-3 text-black text-sm sm:text-base font-semibold drop-shadow-md pointer-events-none">
+    Work 4
+  </figcaption>
+    </figure>
+
+    <!-- Col 2 (your tall, then short, then tall) -->
+    <figure class="relative row-[span_10/span_10] overflow-hidden rounded-xl shadow break-inside-avoid">
+      <img src="images/work1.jpeg" alt="" class="w-full h-full object-cover">
+      <figcaption
+    class="absolute left-3 bottom-3 text-black text-sm sm:text-base font-semibold drop-shadow-md pointer-events-none">
+    Work 5
+  </figcaption>
+    </figure>
+    <figure class="relative row-[span_25/span_25] overflow-hidden rounded-xl shadow break-inside-avoid">
+      <img src="images/work5.jpeg" alt="" class="w-full h-full object-cover">
+      <figcaption
+    class="absolute left-3 bottom-3 text-black text-sm sm:text-base font-semibold drop-shadow-md pointer-events-none">
+    Work 6
+  </figcaption>
+    </figure>
+    <figure class="relative row-[span_10/span_10] overflow-hidden rounded-xl shadow break-inside-avoid">
+      <img src="images/work5.jpeg" alt="" class="w-full h-full object-cover">
+      <figcaption
+    class="absolute left-3 bottom-3 text-black text-sm sm:text-base font-semibold drop-shadow-md pointer-events-none">
+    Work 7
+  </figcaption>
+    </figure>
+    <!-- <figure class="relative row-[span_10/span_10] overflow-hidden rounded-xl shadow break-inside-avoid">
+      <img src="images/work6.jpeg" alt="" class="w-full h-full object-cover">
+      <figcaption
+    class="absolute left-3 bottom-3 text-black text-sm sm:text-base font-semibold drop-shadow-md pointer-events-none">
+    Work 2
+  </figcaption>
+    </figure> -->
+
+    <!-- Col 3 (mix of sizes) -->
+    <figure class="relative row-[span_10/span_10] overflow-hidden rounded-xl shadow break-inside-avoid">
+      <img src="images/work1.jpeg" alt="" class="w-full h-full object-cover">
+      <figcaption
+    class="absolute left-3 bottom-3 text-black text-sm sm:text-base font-semibold drop-shadow-md pointer-events-none">
+    Work 8
+  </figcaption>
+    </figure>
+    <figure class="relative row-[span_10/span_10] overflow-hidden rounded-xl shadow break-inside-avoid">
+      <img src="images/work5.jpeg" alt="" class="w-full h-full object-cover">
+      <figcaption
+    class="absolute left-3 bottom-3 text-black text-sm sm:text-base font-semibold drop-shadow-md pointer-events-none">
+    Work 9
+  </figcaption>
+    </figure>
+    <figure class="relative row-[span_10/span_10] overflow-hidden rounded-xl shadow break-inside-avoid">
+      <img src="images/work5.jpeg" alt="" class="w-full h-full object-cover">
+      <figcaption
+    class="absolute left-3 bottom-3 text-black text-sm sm:text-base font-semibold drop-shadow-md pointer-events-none">
+    Work 10
+  </figcaption>
+    </figure>
+
+    <!-- Col 4 (tall + short + tall) -->
+    <figure class=" relative row-[span_20/span_20] overflow-hidden rounded-xl shadow break-inside-avoid">
+      <img src="images/work.jpeg" alt="" class="w-full h-full object-cover">
+      <figcaption
+    class="absolute left-3 bottom-3 text-black text-sm sm:text-base font-semibold drop-shadow-md pointer-events-none">
+    Work 11
+  </figcaption>
+    </figure>
+    <figure class="relative row-[span_25/span_25] overflow-hidden rounded-xl shadow break-inside-avoid">
+      <img src="images/work1.jpeg" alt="" class="w-full h-full object-cover">
+      <figcaption
+    class="absolute left-3 bottom-3 text-black text-sm sm:text-base font-semibold drop-shadow-md pointer-events-none">
+    Work 12
+  </figcaption>
+    </figure>
+    <figure class="relative row-[span_25/span_25] overflow-hidden rounded-xl shadow break-inside-avoid">
+      <img src="images/work2.jpeg" alt="" class="w-full h-full object-cover">
+      <figcaption
+    class="absolute left-3 bottom-3 text-black text-sm sm:text-base font-semibold drop-shadow-md pointer-events-none">
+    Work 13
+  </figcaption>
+    </figure>
+    <figure class="relative row-[span_10/span_10] lg:row-[span_20/span_20] xl:row-[span_10/span_10] overflow-hidden rounded-xl shadow break-inside-avoid">
+      <img src="images/work1.jpeg" alt="" class="w-full h-full object-cover">
+      <figcaption
+    class="absolute left-3 bottom-3 text-black text-sm sm:text-base font-semibold drop-shadow-md pointer-events-none">
+    Work 14
+  </figcaption>
+    </figure>
+    <figure class="relative row-[span_15/span_15] overflow-hidden rounded-xl shadow break-inside-avoid">
+      <img src="images/work1.jpeg" alt="" class="w-full h-full object-cover">
+      <figcaption
+    class="absolute left-3 bottom-3 text-black text-sm sm:text-base font-semibold drop-shadow-md pointer-events-none">
+    Work 15
+  </figcaption>
+    </figure>
+    <figure class="relative row-[span_10/span_10] lg:row-[span_15/span_15] xl:row-[span_10/span_10] overflow-hidden rounded-xl shadow break-inside-avoid">
+      <img src="images/work1.jpeg" alt="" class="w-full h-full object-cover">
+      <figcaption
+    class="absolute left-3 bottom-3 text-black text-sm sm:text-base font-semibold drop-shadow-md pointer-events-none">
+    Work 16
+  </figcaption>
+    </figure>
+
+  </div>
+</div>
+
   </div>
 </main>
 
-  <footer class="brand-purple text-white py-8 mt-16">
-    <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 text-center space-y-4">
+  <footer class="brand-purple text-black py-8 mt-16">
+    <div class="max-w-[1600px] mx-auto px-4 md:px-6 lg:px-8 text-center space-y-4">
+      <!-- Social icons row -->
+      <div class="flex items-center justify-center gap-6">
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/sreeja_constructions_interiors?igsh=NnFnNzY1eThzbHU2" aria-label="Instagram" class="opacity-90 hover:opacity-100 transition" target="_blank" rel="noopener">
+          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5a5.5 5.5 0 1 1 0 11.001A5.5 5.5 0 0 1 12 7.5zm0 2a3.5 3.5 0 1 0 0 7.001 3.5 3.5 0 0 0 0-7.001zM17.75 6.5a1.25 1.25 0 1 1 0 2.501 1.25 1.25 0 0 1 0-2.501z"/>
+          </svg>
+        </a>
+
+        <!-- Twitter (X) -->
+        <a href="#" aria-label="Twitter" class="opacity-90 hover:opacity-100 transition" target="_blank" rel="noopener">
+          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M3 3h4.6l5.2 7.2L18.8 3H22l-7.7 10.4L22 21h-4.6l-5.4-7.5L8.2 21H3l7.8-10.6L3 3z"/>
+          </svg>
+        </a>
+
+        <!-- Facebook -->
+        <a href="#" aria-label="Facebook" class="opacity-90 hover:opacity-100 transition" target="_blank" rel="noopener">
+          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M22 12.06C22 6.55 17.52 2 12 2S2 6.55 2 12.06c0 4.99 3.66 9.14 8.44 9.94v-7.03H8.4v-2.9h2.04V9.84c0-2.02 1.2-3.14 3.04-3.14.88 0 1.8.16 1.8.16v1.98h-1.01c-1 0-1.31.62-1.31 1.26v1.52h2.23l-.36 2.9h-1.87V22c4.78-.8 8.44-4.95 8.44-9.94z"/>
+          </svg>
+        </a>
+      </div>
+
       <p class="text-sm">© Sreeja Interiors | All Rights Reserved.</p>
     </div>
   </footer>

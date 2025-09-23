@@ -11,8 +11,9 @@
     html { scroll-behavior: smooth; }
     body { font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial; }
     .brand-purple { background-color: #4d185a; }
-    .brand-purple-text { color: #4d185a; }
+    .brand-header-text { color: #9c7248; }
     .active-link { color: #fde68a; }
+    .header-text { color: #2596be;}
   </style>
 </head>
 <body class="text-slate-800 bg-white">
@@ -146,19 +147,19 @@
     <div id="heroCarousel" class="relative overflow-hidden h-[62vh] sm:h-[70vh]">
       <div class="relative h-full">
         <div class="hero-slide absolute inset-0 opacity-100 transition-opacity duration-700 ease-in-out z-0">
-          <img src="images/carsouel1.jpeg" class="w-full h-full object-cover" alt="Slide 1">
+          <img src="images/carsouel1.jpeg" class="w-full h-full object-cover object-center" alt="Slide 1">
         </div>
         <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-700 ease-in-out z-0">
-          <img src="images/carsouel2.jpeg" class="w-full h-full object-cover" alt="Slide 2">
+          <img src="images/carsouel2.jpeg" class="w-full h-full object-cover object-center" alt="Slide 2">
         </div>
         <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-700 ease-in-out z-0">
-          <img src="images/carsouel3.jpeg" class="w-full h-full object-cover" alt="Slide 3">
+          <img src="images/carsouel3.jpeg" class="w-full h-full object-cover object-center" alt="Slide 3">
         </div>
         <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-700 ease-in-out z-0">
-          <img src="images/carsouel4.jpeg" class="w-full h-full object-cover" alt="Slide 4">
+          <img src="images/carsouel4.jpeg" class="w-full h-full object-cover object-center" alt="Slide 4">
         </div>
         <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-700 ease-in-out z-0">
-          <img src="images/carsouel5.jpeg" class="w-full h-full object-cover" alt="Slide 5">
+          <img src="images/carsouel5.jpeg" class="w-full h-full object-cover object-center" alt="Slide 5">
         </div>
       </div>
 
@@ -212,48 +213,73 @@
         <img src="images/img4.jpeg" class="w-full rounded-2xl shadow-lg" alt="Showcase cabinet" />
       </div>
     </div> -->
-<div class="max-w-[1600px] mx-auto px-4 md:px-6 lg:px-8 py-14
-            lg:flex lg:items-stretch lg:gap-10">
+    <div class="max-w-[1600px] mx-auto px-4 md:px-6 lg:px-8 py-14
+                lg:flex lg:items-stretch lg:gap-10">
 
-  <!-- Image column (40% at ≥1024px; ABOVE text on <1024px) -->
-  <div class="order-1 lg:order-2 lg:basis-2/5 h-[500px] rounded-2xl overflow-hidden">
-    <img src="images/hero.jpeg"
-         alt="Showcase cabinet"
-         class="w-full h-full object-cover" />
-  </div>
+      <!-- Image column (40% at ≥1024px; ABOVE text on <1024px) -->
+      <div class="order-1 lg:order-2 lg:basis-2/5 h-[500px] rounded-2xl overflow-hidden">
+        <img src="images/work.jpeg"
+            alt="Showcase cabinet"
+            class="w-full h-full object-cover object-center rounded-7xl" />
+      </div>
 
-  <!-- Text column (60% at ≥1024px; BELOW image on <1024px) -->
-  <div class="order-2 lg:order-1 lg:basis-3/5 min-w-0 mt-8 lg:mt-0
-              flex flex-col justify-start">
-    <div class="space-y-4 md:space-y-5 lg:space-y-6">
-      <h2 class="text-2xl md:text-3xl lg:text-4xl font-semibold brand-purple-text leading-tight">
-        Transforming Spaces, One Home at a Time.
-      </h2>
-      <p class="text-slate-600">
-        We understand that Interiors is an investment, and our mission is to provide products that elevate your
-        living and working spaces. Whether you are furnishing a cozy apartment or designing a lavish villa,
-        Sreeja Interiors brings you designs that blend tradition with contemporary trends.
-      </p>
+      <!-- Text column (60% at ≥1024px; BELOW image on <1024px) -->
+      <div class="order-2 lg:order-1 lg:basis-3/5 min-w-0 mt-8 lg:mt-0
+                  flex flex-col justify-start">
+        <div class="space-y-4 md:space-y-5 lg:space-y-6">
+          <h2 class="text-2xl md:text-3xl lg:text-4xl font-semibold header-text leading-tight ">
+            Transforming Spaces, One Home at a Time.
+          </h2>
+          <p class="text-slate-600">
+            We understand that Interiors is an investment, and our mission is to provide products that elevate your
+            living and working spaces. Whether you are furnishing a cozy apartment or designing a lavish villa,
+            Sreeja Interiors brings you designs that blend tradition with contemporary trends.
+          </p>
 
-      <h2 class="pt-2 md:pt-3 lg:pt-4 text-2xl md:text-3xl lg:text-4xl font-semibold brand-purple-text leading-tight">
-        Give a Personalized Touch to Your Dream Home.
-      </h2>
-      <p class="text-slate-600">
-        We bring customization to your fingertips, from the initial consultation through the end process; We as a Interiors
-        designers will provide you with all the support and advice so you get a personalized touch in your dream home.
-        Over the years, we have worked with 100+ clients and we provide interior design and furnishing services...
-      </p>
+          <h2 class="pt-2 md:pt-3 lg:pt-4 text-2xl md:text-3xl lg:text-4xl font-semibold brand-header-text leading-tight">
+            Give a Personalized Touch to Your Dream Home.
+          </h2>
+          <p class="text-slate-600">
+            We bring customization to your fingertips, from the initial consultation through the end process; We as a Interiors
+            designers will provide you with all the support and advice so you get a personalized touch in your dream home.
+            Over the years, we have worked with 100+ clients and we provide interior design and furnishing services...
+          </p>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
 
   </section>
 </main>
 
-  <footer class="brand-purple text-white py-8 mt-16">
-    <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 text-center space-y-4">
-      <p class="text-sm">© Sreeja Interiors | All Rights Reserved.</p>
+<footer class="brand-purple text-white py-8 mt-16">
+  <div class="max-w-[1600px] mx-auto px-4 md:px-6 lg:px-8 text-center space-y-4">
+    <!-- Social icons row -->
+    <div class="flex items-center justify-center gap-6">
+      <!-- Instagram -->
+      <a href="https://www.instagram.com/sreeja_constructions_interiors?igsh=NnFnNzY1eThzbHU2" aria-label="Instagram" class="opacity-90 hover:opacity-100 transition" target="_blank" rel="noopener">
+        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5a5.5 5.5 0 1 1 0 11.001A5.5 5.5 0 0 1 12 7.5zm0 2a3.5 3.5 0 1 0 0 7.001 3.5 3.5 0 0 0 0-7.001zM17.75 6.5a1.25 1.25 0 1 1 0 2.501 1.25 1.25 0 0 1 0-2.501z"/>
+        </svg>
+      </a>
+
+      <!-- Twitter (X) -->
+      <a href="#" aria-label="Twitter" class="opacity-90 hover:opacity-100 transition" target="_blank" rel="noopener">
+        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M3 3h4.6l5.2 7.2L18.8 3H22l-7.7 10.4L22 21h-4.6l-5.4-7.5L8.2 21H3l7.8-10.6L3 3z"/>
+        </svg>
+      </a>
+
+      <!-- Facebook -->
+      <a href="#" aria-label="Facebook" class="opacity-90 hover:opacity-100 transition" target="_blank" rel="noopener">
+        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M22 12.06C22 6.55 17.52 2 12 2S2 6.55 2 12.06c0 4.99 3.66 9.14 8.44 9.94v-7.03H8.4v-2.9h2.04V9.84c0-2.02 1.2-3.14 3.04-3.14.88 0 1.8.16 1.8.16v1.98h-1.01c-1 0-1.31.62-1.31 1.26v1.52h2.23l-.36 2.9h-1.87V22c4.78-.8 8.44-4.95 8.44-9.94z"/>
+        </svg>
+      </a>
     </div>
-  </footer>
+
+    <p class="text-sm">© Sreeja Interiors | All Rights Reserved.</p>
+  </div>
+</footer>
+
 </body>
 </html>

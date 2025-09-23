@@ -61,9 +61,22 @@
     menuBtn?.addEventListener('click', toggleMenu);
   </script>
 
-<main class='py-16 bg-violet-50'>
+<main class='bg-violet-50'>
+  <div class="relative h-48 sm:h-56 lg:h-72  overflow-hidden mb-10">
+      <img
+        src="images/carsouel1.jpeg"
+        alt="About Us banner"
+        class="absolute inset-0 w-full h-full object-cover grayscale opacity-60"/>
+      <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-black/10 pointer-events-none"></div>
+
+      <div class="absolute inset-0 flex items-center justify-center text-center px-4">
+        <h2 class=" text-3xl brand-purple-text sm:text-2xl font-semibold drop-shadow">
+          About Us
+        </h2>
+      </div>
+  </div>
   <div class='max-w-7xl mx-auto px-4 md:px-6 lg:px-8'>
-    <h2 class='text-3xl font-semibold brand-purple-text mb-8'>About Us</h2>
+    <!-- <h2 class='text-3xl font-semibold brand-purple-text mb-8'></h2> -->
     <div class='grid md:grid-cols-2 gap-10 items-start'>
       <div class='space-y-5 text-slate-700 leading-relaxed'>
         <p>This company, with a legacy of offering finest home interiors in India for the past 10 years, is the choice of a growing number of clients. Sreeja Interiors combines innovation, freshness and life into interior designing and execution.</p>
@@ -80,7 +93,31 @@
 </main>
 
   <footer class="brand-purple text-white py-8 mt-16">
-    <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 text-center space-y-4">
+    <div class="max-w-[1600px] mx-auto px-4 md:px-6 lg:px-8 text-center space-y-4">
+      <!-- Social icons row -->
+      <div class="flex items-center justify-center gap-6">
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/sreeja_constructions_interiors?igsh=NnFnNzY1eThzbHU2" aria-label="Instagram" class="opacity-90 hover:opacity-100 transition" target="_blank" rel="noopener">
+          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5a5.5 5.5 0 1 1 0 11.001A5.5 5.5 0 0 1 12 7.5zm0 2a3.5 3.5 0 1 0 0 7.001 3.5 3.5 0 0 0 0-7.001zM17.75 6.5a1.25 1.25 0 1 1 0 2.501 1.25 1.25 0 0 1 0-2.501z"/>
+          </svg>
+        </a>
+
+        <!-- Twitter (X) -->
+        <a href="#" aria-label="Twitter" class="opacity-90 hover:opacity-100 transition" target="_blank" rel="noopener">
+          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M3 3h4.6l5.2 7.2L18.8 3H22l-7.7 10.4L22 21h-4.6l-5.4-7.5L8.2 21H3l7.8-10.6L3 3z"/>
+          </svg>
+        </a>
+
+        <!-- Facebook -->
+        <a href="#" aria-label="Facebook" class="opacity-90 hover:opacity-100 transition" target="_blank" rel="noopener">
+          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M22 12.06C22 6.55 17.52 2 12 2S2 6.55 2 12.06c0 4.99 3.66 9.14 8.44 9.94v-7.03H8.4v-2.9h2.04V9.84c0-2.02 1.2-3.14 3.04-3.14.88 0 1.8.16 1.8.16v1.98h-1.01c-1 0-1.31.62-1.31 1.26v1.52h2.23l-.36 2.9h-1.87V22c4.78-.8 8.44-4.95 8.44-9.94z"/>
+          </svg>
+        </a>
+      </div>
+
       <p class="text-sm">© Sreeja Interiors | All Rights Reserved.</p>
     </div>
   </footer>
