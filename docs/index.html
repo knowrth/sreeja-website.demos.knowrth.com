@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sreeja Interiors — Home</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial; }
+    .brand-purple { background-color: #4d185a; }
+    .brand-purple-text { color: #4d185a; }
+    .active-link { color: #fde68a; }
+  </style>
+</head>
+<body class="text-slate-800 bg-white">
+  <header class="brand-purple text-white sticky top-0 z-50 shadow">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 lg:h-20">
+        <a href="index.html" class="flex items-center gap-3">
+          <div class="w-10 h-10 bg-white/10 rounded-md flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 10.5L12 4l9 6.5M5 10.5V20h14v-9.5" />
+            </svg>
+          </div>
+          <div class="leading-tight">
+            <div class="text-xl lg:text-2xl font-bold tracking-wide">SREEJA</div>
+            <div class="text-xs lg:text-sm -mt-1 uppercase tracking-widest">Interiors</div>
+          </div>
+        </a>
+        <nav class="hidden lg:flex items-center gap-8 text-sm font-medium">
+          <a href="index.html" class="hover:text-fuchsia-200 active-link">Home</a>
+          <a href="about.html" class="hover:text-fuchsia-200 ">About Us</a>
+          <a href="services.html" class="hover:text-fuchsia-200 ">What We Do</a>
+          <a href="works.html" class="hover:text-fuchsia-200 ">Our Works</a>
+          <a href="contact.html" class="hover:text-fuchsia-200 ">Contact Us</a>
+        </nav>
+        <button id="menuBtn" class="lg:hidden p-2 rounded-md hover:bg-white/10 focus:outline-none" aria-label="Open Menu">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M3 5h14v2H3V5zm0 4h14v2H3V9zm0 4h14v2H3v-2z" clip-rule="evenodd" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobileMenu" class="lg:hidden hidden border-t border-white/10">
+      <div class="px-4 py-3 space-y-2 text-sm font-medium">
+        <a href="index.html" class="block px-2 py-2 rounded hover:bg-white/10 active-link">Home</a>
+        <a href="about.html" class="block px-2 py-2 rounded hover:bg-white/10 ">About Us</a>
+        <a href="services.html" class="block px-2 py-2 rounded hover:bg-white/10 ">What We Do</a>
+        <a href="works.html" class="block px-2 py-2 rounded hover:bg-white/10 ">Our Works</a>
+        <a href="contact.html" class="block px-2 py-2 rounded hover:bg-white/10 ">Contact Us</a>
+      </div>
+    </div>
+  </header>
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    function toggleMenu() { mobileMenu.classList.toggle('hidden'); }
+    menuBtn?.addEventListener('click', toggleMenu);
+    function setupHeroCarousel() {
+    const root = document.getElementById('heroCarousel');
+    if (!root) return;
+
+    const slides = Array.from(root.querySelectorAll('.hero-slide'));
+    const prevBtn = root.querySelector('[data-hero-prev]');
+    const nextBtn = root.querySelector('[data-hero-next]');
+    const dots = Array.from(root.querySelectorAll('[data-hero-go]'));
+
+    let i = 0, timer;
+
+    function show(n) {
+      i = (n + slides.length) % slides.length;
+      slides.forEach((s, idx) => {
+        s.style.opacity = idx === i ? '1' : '0';
+        s.style.zIndex = idx === i ? '1' : '0';
+      });
+      dots.forEach((d, idx) => {
+        d.classList.toggle('bg-white', idx === i);
+        d.classList.toggle('bg-white/40', idx !== i);
+      });
+    }
+
+    const next = () => show(i + 1);
+    const prev = () => show(i - 1);
+
+    function start() { timer = setInterval(next, 5000); }
+    function stop() { clearInterval(timer); }
+
+    nextBtn?.addEventListener('click', () => { stop(); next(); start(); });
+    prevBtn?.addEventListener('click', () => { stop(); prev(); start(); });
+    dots.forEach(d => d.addEventListener('click', (e) => {
+      stop(); show(parseInt(d.dataset.heroGo, 10)); start();
+    }));
+
+    root.addEventListener('mouseenter', stop);
+    root.addEventListener('mouseleave', start);
+
+    show(0);
+    start();
+  }
+
+  // async function loadRoute() {
+  //   const hash = window.location.hash || '#/home';
+  //   const name = hash.replace('#/', '') || 'home';
+  //   const url = ROUTES[name] || ROUTES['home'];
+
+  //   try {
+  //     const res = await fetch(url, { cache: 'no-store' });
+  //     if (!res.ok) throw new Error(res.statusText);
+  //     const html = await res.text();
+  //     document.getElementById('app').innerHTML = html;
+
+  //     setActive(name);
+
+  //     // NEW: initialize hero carousel if present on this page
+  //     setupHeroCarousel();
+
+  //     if (!mobileMenu.classList.contains('hidden')) toggleMenu();
+  //     window.scrollTo({ top: 0, behavior: 'smooth' });
+  //   } catch (err) {
+  //     document.getElementById('app').innerHTML =
+  //       `<div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-16">
+  //          <p class="text-red-600">Failed to load page: ${err.message}.</p>
+  //          <p class="mt-2 text-slate-600">Tip: serve with <code>python -m http.server 8080</code> to avoid file:// CORS.</p>
+  //        </div>`;
+  //   }
+  // }
+  document.addEventListener('DOMContentLoaded', setupHeroCarousel);
+
+  </script>
+
+<main>
+  <section class='relative'>
+    <!-- <div class='relative overflow-hidden h-[62vh] sm:h-[70vh]'>
+      <div class='absolute inset-0'><img src='images/img1.jpeg' class='w-full h-full object-cover' alt='Hero'/></div>
+      <div class='absolute inset-0 bg-black/40'></div>
+      <div class='absolute inset-0 flex flex-col items-center justify-center text-center px-6'>
+        <h1 class='text-white text-3xl sm:text-4xl lg:text-5xl font-semibold drop-shadow'>TV Showcase</h1>
+        <p class='mt-3 text-white/90 max-w-2xl'>Explore our collection of wooden simple TV showcase designs, perfect for your living room. Enjoy stylish storage and display solutions.</p>
+      </div>
+    </div> -->
+
+
+    <div id="heroCarousel" class="relative overflow-hidden h-[62vh] sm:h-[70vh]">
+      <div class="relative h-full">
+        <div class="hero-slide absolute inset-0 opacity-100 transition-opacity duration-700 ease-in-out z-0">
+          <img src="images/carsouel1.jpeg" class="w-full h-full object-cover" alt="Slide 1">
+        </div>
+        <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-700 ease-in-out z-0">
+          <img src="images/carsouel2.jpeg" class="w-full h-full object-cover" alt="Slide 2">
+        </div>
+        <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-700 ease-in-out z-0">
+          <img src="images/carsouel3.jpeg" class="w-full h-full object-cover" alt="Slide 3">
+        </div>
+        <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-700 ease-in-out z-0">
+          <img src="images/carsouel4.jpeg" class="w-full h-full object-cover" alt="Slide 4">
+        </div>
+        <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-700 ease-in-out z-0">
+          <img src="images/carsouel5.jpeg" class="w-full h-full object-cover" alt="Slide 5">
+        </div>
+      </div>
+
+      <!-- Dark overlay (above slides, below text) -->
+      <!-- <div class="absolute inset-0 bg-black/40 z-10 pointer-events-none"></div> -->
+
+      <!-- Centered text (above overlay) -->
+      <div class="absolute inset-0 z-20 flex flex-col items-center justify-center text-center px-6">
+            <h1 class="text-white text-2xl sm:text-4xl lg:text-3xl font-semibold drop-shadow">TV Showcase</h1>
+            <p class="mt-3 text-white/90 text-l max-w-3xl">Explore our collection of wooden simple TV showcase designs, perfect for your living room. Enjoy stylish storage and display solutions.</p>
+          </div>
+
+      <!-- Controls (top-most) -->
+      <!-- Prev -->
+      <button aria-label="Previous slide"
+        data-hero-prev
+        class="absolute left-3 top-1/2 -translate-y-1/2 z-30 p-0 bg-transparent">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 sm:w-8 sm:h-8 drop-shadow"
+            viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
+        </svg>
+      </button>
+
+      <!-- Next -->
+      <button aria-label="Next slide"
+        data-hero-next
+        class="absolute right-3 top-1/2 -translate-y-1/2 z-30 p-0 bg-transparent">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 sm:w-8 sm:h-8 drop-shadow"
+            viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+        </svg>
+      </button>
+
+
+      <!-- Dots -->
+      <!-- <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-30">
+        <button data-hero-go="0" class="w-2.5 h-2.5 rounded-full bg-white"></button>
+        <button data-hero-go="1" class="w-2.5 h-2.5 rounded-full bg-white/40"></button>
+        <button data-hero-go="2" class="w-2.5 h-2.5 rounded-full bg-white/40"></button>
+      </div> -->
+    </div>
+
+
+
+    <!-- <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-14 grid md:grid-cols-2 gap-10">
+      <div>
+        <h2 class="text-2xl md:text-3xl font-semibold brand-purple-text">Transforming Spaces, One Home at a Time.</h2>
+        <p class="mt-3 text-slate-600">We understand that Interiors is an investment, and our mission is to provide products that elevate your living and working spaces. Whether you are furnishing a cozy apartment or designing a lavish villa, Sreeja Interiors brings you designs that blend tradition with contemporary trends.</p>
+      </div>
+      <div class="relative">
+        <img src="images/img4.jpeg" class="w-full rounded-2xl shadow-lg" alt="Showcase cabinet" />
+      </div>
+    </div> -->
+<div class="max-w-[1600px] mx-auto px-4 md:px-6 lg:px-8 py-14
+            lg:flex lg:items-stretch lg:gap-10">
+
+  <!-- Image column (40% at ≥1024px; ABOVE text on <1024px) -->
+  <div class="order-1 lg:order-2 lg:basis-2/5 h-[500px] rounded-2xl overflow-hidden">
+    <img src="images/hero.jpeg"
+         alt="Showcase cabinet"
+         class="w-full h-full object-cover" />
+  </div>
+
+  <!-- Text column (60% at ≥1024px; BELOW image on <1024px) -->
+  <div class="order-2 lg:order-1 lg:basis-3/5 min-w-0 mt-8 lg:mt-0
+              flex flex-col justify-start">
+    <div class="space-y-4 md:space-y-5 lg:space-y-6">
+      <h2 class="text-2xl md:text-3xl lg:text-4xl font-semibold brand-purple-text leading-tight">
+        Transforming Spaces, One Home at a Time.
+      </h2>
+      <p class="text-slate-600">
+        We understand that Interiors is an investment, and our mission is to provide products that elevate your
+        living and working spaces. Whether you are furnishing a cozy apartment or designing a lavish villa,
+        Sreeja Interiors brings you designs that blend tradition with contemporary trends.
+      </p>
+
+      <h2 class="pt-2 md:pt-3 lg:pt-4 text-2xl md:text-3xl lg:text-4xl font-semibold brand-purple-text leading-tight">
+        Give a Personalized Touch to Your Dream Home.
+      </h2>
+      <p class="text-slate-600">
+        We bring customization to your fingertips, from the initial consultation through the end process; We as a Interiors
+        designers will provide you with all the support and advice so you get a personalized touch in your dream home.
+        Over the years, we have worked with 100+ clients and we provide interior design and furnishing services...
+      </p>
+    </div>
+  </div>
+</div>
+
+  </section>
+</main>
+
+  <footer class="brand-purple text-white py-8 mt-16">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 text-center space-y-4">
+      <p class="text-sm">© Sreeja Interiors | All Rights Reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sreeja Interiors — Our Works</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial; }
+    .brand-purple { background-color: #4d185a; }
+    .brand-purple-text { color: #4d185a; }
+    .active-link { color: #fde68a; }
+  </style>
+</head>
+<body class="text-slate-800 bg-white">
+  <header class="brand-purple text-white sticky top-0 z-50 shadow">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 lg:h-20">
+        <a href="index.html" class="flex items-center gap-3">
+          <div class="w-10 h-10 bg-white/10 rounded-md flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 10.5L12 4l9 6.5M5 10.5V20h14v-9.5" />
+            </svg>
+          </div>
+          <div class="leading-tight">
+            <div class="text-xl lg:text-2xl font-bold tracking-wide">SREEJA</div>
+            <div class="text-xs lg:text-sm -mt-1 uppercase tracking-widest">Interiors</div>
+          </div>
+        </a>
+        <nav class="hidden lg:flex items-center gap-8 text-sm font-medium">
+          <a href="index.html" class="hover:text-fuchsia-200 ">Home</a>
+          <a href="about.html" class="hover:text-fuchsia-200 ">About Us</a>
+          <a href="services.html" class="hover:text-fuchsia-200 ">What We Do</a>
+          <a href="works.html" class="hover:text-fuchsia-200 active-link">Our Works</a>
+          <a href="contact.html" class="hover:text-fuchsia-200 ">Contact Us</a>
+        </nav>
+        <button id="menuBtn" class="lg:hidden p-2 rounded-md hover:bg-white/10 focus:outline-none" aria-label="Open Menu">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M3 5h14v2H3V5zm0 4h14v2H3V9zm0 4h14v2H3v-2z" clip-rule="evenodd" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobileMenu" class="lg:hidden hidden border-t border-white/10">
+      <div class="px-4 py-3 space-y-2 text-sm font-medium">
+        <a href="index.html" class="block px-2 py-2 rounded hover:bg-white/10 ">Home</a>
+        <a href="about.html" class="block px-2 py-2 rounded hover:bg-white/10 ">About Us</a>
+        <a href="services.html" class="block px-2 py-2 rounded hover:bg-white/10 ">What We Do</a>
+        <a href="works.html" class="block px-2 py-2 rounded hover:bg-white/10 active-link">Our Works</a>
+        <a href="contact.html" class="block px-2 py-2 rounded hover:bg-white/10 ">Contact Us</a>
+      </div>
+    </div>
+  </header>
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    function toggleMenu() { mobileMenu.classList.toggle('hidden'); }
+    menuBtn?.addEventListener('click', toggleMenu);
+  </script>
+
+<main class='py-16 bg-gray-50'>
+  <div class='max-w-7xl mx-auto px-4 md:px-6 lg:px-8'>
+    <h2 class='text-3xl font-semibold brand-purple-text mb-8 text-center'>Our Works</h2>
+    <div class='columns-1 sm:columns-2 lg:columns-3 gap-4 [column-fill:_balance]'>
+      <img src='images/img1.jpeg' class='mb-4 w-full rounded-lg shadow' alt='work1'/>
+      <img src='images/img2.jpeg' class='mb-4 w-full rounded-lg shadow' alt='work2'/>
+      <img src='images/img3.jpeg' class='mb-4 w-full rounded-lg shadow' alt='work3'/>
+      <img src='images/img4.jpeg' class='mb-4 w-full rounded-lg shadow' alt='work4'/>
+      <img src='images/img5.jpeg' class='mb-4 w-full rounded-lg shadow' alt='work5'/>
+      <img src='images/img1.jpeg' class='mb-4 w-full rounded-lg shadow' alt='work6'/>
+      <img src='images/img2.jpeg' class='mb-4 w-full rounded-lg shadow' alt='work7'/>
+      <img src='images/img3.jpeg' class='mb-4 w-full rounded-lg shadow' alt='work8'/>
+      <img src='images/img4.jpeg' class='mb-4 w-full rounded-lg shadow' alt='work9'/>
+    </div>
+  </div>
+</main>
+
+  <footer class="brand-purple text-white py-8 mt-16">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 text-center space-y-4">
+      <p class="text-sm">© Sreeja Interiors | All Rights Reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
