@@ -11,6 +11,10 @@
     html { scroll-behavior: smooth; }
     body { font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial; }
     .brand-purple { background-color: #4d185a; }
+    .about-us-pink { background-color: #fcefff; }
+    .about-us-blue { background-color: #e3f5ff; }
+    .about-us-light-yellow { background-color: #fdfff2; }
+    .about-us-orange { background-color: #fff0e0; }
     .brand-purple-text { color: #4d185a; }
     .active-link { color: #fde68a; }
   </style>
@@ -20,15 +24,14 @@
     <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16 lg:h-20">
         <a href="index.html" class="flex items-center gap-3">
-          <div class="w-10 h-10 bg-white/10 rounded-md flex items-center justify-center">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 10.5L12 4l9 6.5M5 10.5V20h14v-9.5" />
-            </svg>
-          </div>
-          <div class="leading-tight">
-            <div class="text-xl lg:text-2xl font-bold tracking-wide">SREEJA</div>
-            <div class="text-xs lg:text-sm -mt-1 uppercase tracking-widest">Interiors</div>
-          </div>
+          <img
+          src="images/logo.png"
+          sizes="(min-width: 1024px) 200px, (min-width: 640px) 180px, 160px"
+          alt="Sreeja Interiors logo"
+          class="w-auto h-8 sm:h-10 lg:h-12 object-contain"
+          loading="eager"
+          decoding="async"
+        />
         </a>
         <nav class="hidden lg:flex items-center gap-8 text-sm font-medium">
           <a href="index.html" class="hover:text-fuchsia-200 ">Home</a>
@@ -62,7 +65,7 @@
   </script>
 
 <main>
-  <div class="relative h-48 sm:h-56 lg:h-72  overflow-hidden mb-10">
+  <div class="relative h-48 sm:h-56 lg:h-72  overflow-hidden ">
       <img
         src="images/carsouel1.jpeg"
         alt="What We Do banner"
@@ -75,58 +78,145 @@
         </h2>
       </div>
   </div>
-  <div class='max-w-7xl mx-auto px-4 md:px-6 lg:px-8'>
-    <!-- <h2 class='text-3xl font-semibold brand-purple-text mb-10 text-center'></h2> -->
-    <div class='bg-violet-100/60 rounded-2xl p-6 md:p-8 leading-relaxed text-slate-700'>
-      <p class='mb-3'>“Made for you” may be the most accurate phrase to express what we do in interiors. We have been designing and executing exquisite home interiors since 2015. Custom-made interior is the best way to ensure that modular kitchens, wardrobes and other furniture fit perfectly.</p>
-      <p class='mb-3'>Our designers possess impeccable ability to understand requirements and provide the best space planning. Sreeja Interiors’ fully equipped modular kitchen is distinct with unique design and modern features.</p>
-      <p class='font-medium'>Specialized in: Custom-made Bedrooms, Modular Kitchens, and Wardrobes.</p>
-    </div>
-    <div class='mt-10 grid md:grid-cols-3 gap-6'>
-      <article class='bg-white border rounded-2xl shadow-sm overflow-hidden'>
-        <img src='images/img5.jpeg' class='w-full h-48 object-cover' alt='Modular Kitchen'/>
-        <div class='p-5'>
-          <h3 class='text-xl font-semibold brand-purple-text'>Modular Kitchen</h3>
-          <p class='mt-2 text-sm text-slate-600'>Customized modular kitchen designs that suit your lifestyle and fit perfectly. We visit the site, take measurements, finalize drawings and execute within 35–40 days.</p>
-        </div>
-      </article>
-      <article class='bg-white border rounded-2xl shadow-sm overflow-hidden'>
-        <img src='images/img3.jpeg' class='w-full h-48 object-cover' alt='Custom-made Bedroom'/>
-        <div class='p-5'>
-          <h3 class='text-xl font-semibold brand-purple-text'>Custom-made Bedroom</h3>
-          <p class='mt-2 text-sm text-slate-600'>Relax with custom-made ideas: cots, side tables, wardrobes and dressing tables. Choose neat storage and a peace-of-mind style that matches your interior theme.</p>
-        </div>
-      </article>
-      <article class='bg-white border rounded-2xl shadow-sm overflow-hidden'>
-        <img src='images/img1.jpeg' class='w-full h-48 object-cover' alt='Wardrobe'/>
-        <div class='p-5'>
-          <h3 class='text-xl font-semibold brand-purple-text'>Wardrobe</h3>
-          <p class='mt-2 text-sm text-slate-600'>Wardrobe designs customized to your space and needs, produced from our own factory and installed by an experienced team with perfect coordination.</p>
-        </div>
-      </article>
+
+<section class="about-us-pink">
+  <div class="max-w-7xl mx-auto px-4 py-12">
+    <div class="grid md:grid-cols-2 lg:grid-cols-[30%_65%] gap-10 items-center">
+
+      <div class="grid grid-cols-2  gap-2 [grid-auto-rows:10px]">
+        <figure class="relative overflow-hidden shadow row-[span_12/span_12]">
+          <img src="images/work.jpeg" alt="Modular Kitchen 1" class="w-full h-full object-cover block">
+        </figure>
+
+        <figure class="overflow-hidden shadow  row-[span_10/span_10]">
+          <img src="images/work1.jpeg" alt="Modular Kitchen 2" class="w-full h-full object-cover block">
+        </figure>
+
+        <figure class="overflow-hidden shadow  row-[span_12/span_12] ">
+          <img src="images/work4.jpeg" alt="Modular Kitchen 3" class="w-full h-full object-cover block">
+        </figure>
+
+        <figure class="overflow-hidden shadow  row-[span_10/span_10] mt-1">
+          <img src="images/work14.jpeg" alt="Modular Kitchen 4" class="w-full h-full object-cover block">
+        </figure>
+      </div>
+
+
+      <div class="self-start">
+        <p class="leading-7  text-slate-700">
+          “Made for you” may be an accurate phrase to express what we do in interiors. 
+          We have been designing and executing exquisite home interiors since 2015. 
+          Custom-made interior is the best way to ensure that modular kitchen, wardrobes and other furniture perfectly fits to the spaces. 
+          Our interior designers possess impeccable ability to understand client’s requirements and provide the best space planning for a house or flat. 
+          Sreeja Interiors fully equipped modular kitchen is distinct with its unique design and most modern features. 
+          We plan and make contemporary style furniture for bedrooms, living and dining rooms as well. 
+          Innovative ideas, creative designs and ability to deliver the promises on time enables us to retain the leadership in this field.
+        </p>
+        <h3 class="text-xl  font-semibold mb-3 mt-3">Specialized in</h3>
+        <h6 class="leading-7 text-slate-700">Custom-made Bedroom</h6>
+        <h6 class="leading-7 text-slate-700">Modular Kitchen</h6>
+        <h6 class="leading-7 text-slate-700">Wardrobes</h6>
+      </div>
     </div>
   </div>
+</section>
+
+<section class="about-us-blue">
+  <div class="max-w-7xl mx-auto px-4 py-12">
+    <div class="grid md:grid-cols-2  gap-10 lg:grid-cols-[65%_30%] items-center">
+
+      <div class="self-start">
+        <h3 class="text-2xl brand-purple-text font-semibold mb-3">Modular Kitchen</h3>
+        <p class="leading-7 text-slate-700">
+          We offer modular kitchen designs for flat (apartment), or villas anywhere in  AP as per client’s requirements. 
+          Customized modular kitchen designs suit the client's lifestyle and fits perfectly in the space. 
+          An experienced interior designer from Sreeja interiors visits the site, takes measurements and understands requirements through several discussions. 
+          Our designer incorporates client’s requirements into suitable design as per shape and size of the kitchen. 
+          Once the client is completely satisfied with the drawings and specifications, the company produces a modular kitchen from its own factory. 
+          A team of experienced technicians perform installation on site with perfect coordination. 
+          This professional interior design company can execute a work within 35-40 days of finalization of drawings. 
+        </p>
+      </div>
+
+      <figure class="relative overflow-hidden  shadow">
+        <img src="images/work2.jpeg" alt="Modular Kitchen" class="w-full h-72 md:h-[22rem] object-cover">
+        
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="about-us-light-yellow">
+  <div class="max-w-7xl mx-auto px-4 py-12">
+    <div class="grid md:grid-cols-2 lg:grid-cols-[30%_65%] gap-10 items-center">
+      
+      <figure class="relative overflow-hidden  shadow">
+        <img src="images/work14.jpeg" alt="Custom-made Bedroom" class="w-full h-[500px]  object-cover">
+        
+      </figure>
+      
+      <div class="self-start">
+        <h3 class="text-2xl brand-purple-text font-semibold mb-3">Custom-made Bedroom</h3>
+        <p class="leading-7 text-slate-700">
+          A large portion of anyone’s life is spent in a bedroom, as the best place to relieve anxieties, worries, and hurries. 
+          Family feels secure and free in this room and thus it needs the best ambiance, facilities, and provisions. 
+          Bedroom furniture like cot, side tables, wardrobes and dressing table mostly occupies almost all the space in a normal bedroom. 
+          In order to maintain bedroom excellence, it is important to choose bedroom furniture in matches the style with your bedroom interior design. 
+        </p>
+        <p class="leading-7 text-slate-700">
+          Relax with custom-made ideas of cots from Sreeja. 
+          Bedroom beauty depends mainly on how the cot is built and arranged, supported by lighting, and side tables. 
+          Choose from the wide range of styles and colour options available in your desired design. 
+          A neat storage, peace of mind style and comfort can be expected when it designed as required. 
+          Cot, grey, umber, milky, crop, graffiti, scratch etc. are some of the cot samples to select the model that we can follow either in King or Queen Sizes.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about-us-orange">
+  <div class="max-w-7xl mx-auto px-4 py-12">
+    <div class="grid md:grid-cols-2 lg:grid-cols-[65%_30%] gap-10 items-center">
+      
+      <div class="self-start">
+        <h3 class="text-2xl brand-purple-text font-semibold mb-3">Wardrobes</h3>
+        <p class="leading-7 text-slate-700">
+          Classy and trendy wardrobes transform a bedroom in addition to give ample storage facilities. 
+          Where it fits better and what should be the size is often a matter to be discussed with a designer and decide. 
+          Next is the choice of colour and finish to match with the theme of the bedroom. 
+          Below are some of the samples of wardrobes we have done. 
+          Bronze, Nottingham, Recon, Balsam, Taupe, Chamois are some of the themes usually selected by our clients. 
+          Any change is welcomed, alterations are as required.
+        </p>
+      </div>
+      
+      <figure class=" overflow-hidden  shadow">
+        <img src="images/work3.jpeg" alt="Wardrobes" class="w-full h-[450px]  object-cover">
+        
+      </figure>
+    </div>
+  </div>
+</section>
+
 </main>
 
-  <footer class="brand-purple text-white py-8 mt-16">
+  <footer class="brand-purple text-white py-8 ">
     <div class="max-w-[1600px] mx-auto px-4 md:px-6 lg:px-8 text-center space-y-4">
-      <!-- Social icons row -->
       <div class="flex items-center justify-center gap-6">
-        <!-- Instagram -->
+
         <a href="https://www.instagram.com/sreeja_constructions_interiors?igsh=NnFnNzY1eThzbHU2" aria-label="Instagram" class="opacity-90 hover:opacity-100 transition" target="_blank" rel="noopener">
           <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
             <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5a5.5 5.5 0 1 1 0 11.001A5.5 5.5 0 0 1 12 7.5zm0 2a3.5 3.5 0 1 0 0 7.001 3.5 3.5 0 0 0 0-7.001zM17.75 6.5a1.25 1.25 0 1 1 0 2.501 1.25 1.25 0 0 1 0-2.501z"/>
           </svg>
         </a>
 
-        <!-- Twitter (X) -->
         <a href="#" aria-label="Twitter" class="opacity-90 hover:opacity-100 transition" target="_blank" rel="noopener">
           <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
             <path d="M3 3h4.6l5.2 7.2L18.8 3H22l-7.7 10.4L22 21h-4.6l-5.4-7.5L8.2 21H3l7.8-10.6L3 3z"/>
           </svg>
         </a>
 
-        <!-- Facebook -->
         <a href="#" aria-label="Facebook" class="opacity-90 hover:opacity-100 transition" target="_blank" rel="noopener">
           <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
             <path d="M22 12.06C22 6.55 17.52 2 12 2S2 6.55 2 12.06c0 4.99 3.66 9.14 8.44 9.94v-7.03H8.4v-2.9h2.04V9.84c0-2.02 1.2-3.14 3.04-3.14.88 0 1.8.16 1.8.16v1.98h-1.01c-1 0-1.31.62-1.31 1.26v1.52h2.23l-.36 2.9h-1.87V22c4.78-.8 8.44-4.95 8.44-9.94z"/>

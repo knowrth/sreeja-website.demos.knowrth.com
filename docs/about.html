@@ -20,15 +20,14 @@
     <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16 lg:h-20">
         <a href="index.html" class="flex items-center gap-3">
-          <div class="w-10 h-10 bg-white/10 rounded-md flex items-center justify-center">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 10.5L12 4l9 6.5M5 10.5V20h14v-9.5" />
-            </svg>
-          </div>
-          <div class="leading-tight">
-            <div class="text-xl lg:text-2xl font-bold tracking-wide">SREEJA</div>
-            <div class="text-xs lg:text-sm -mt-1 uppercase tracking-widest">Interiors</div>
-          </div>
+          <img
+          src="images/logo.png"
+          sizes="(min-width: 1024px) 200px, (min-width: 640px) 180px, 160px"
+          alt="Sreeja Interiors logo"
+          class="w-auto h-8 sm:h-10 lg:h-12 object-contain"
+          loading="eager"
+          decoding="async"
+        />
         </a>
         <nav class="hidden lg:flex items-center gap-8 text-sm font-medium">
           <a href="index.html" class="hover:text-fuchsia-200 ">Home</a>
@@ -61,7 +60,7 @@
     menuBtn?.addEventListener('click', toggleMenu);
   </script>
 
-<main class='bg-violet-50'>
+<main >
   <div class="relative h-48 sm:h-56 lg:h-72  overflow-hidden mb-10">
       <img
         src="images/carsouel1.jpeg"
@@ -75,42 +74,68 @@
         </h2>
       </div>
   </div>
-  <div class='max-w-7xl mx-auto px-4 md:px-6 lg:px-8'>
-    <!-- <h2 class='text-3xl font-semibold brand-purple-text mb-8'></h2> -->
-    <div class='grid md:grid-cols-2 gap-10 items-start'>
-      <div class='space-y-5 text-slate-700 leading-relaxed'>
-        <p>This company, with a legacy of offering finest home interiors in India for the past 10 years, is the choice of a growing number of clients. Sreeja Interiors combines innovation, freshness and life into interior designing and execution.</p>
-        <p>With a telling presence as the best interior designers in Andhra Pradesh we have completed more than 100+ projects in various locations across AP till date. We design, produce and implement premium home interiors to the satisfaction of clients.</p>
-        <p>Our journey began with a vision to bring craftsmanship, innovation, and timeless design to Indian homes. Today, we stand as one of the fastest-growing and most trusted names in Andhra Pradesh.</p>
+  <div class="max-w-7xl mx-auto px-4 py-12">
+    <div class="grid md:grid-cols-2 lg:grid-cols-[65%_30%] gap-10 items-center">
+      <div class='self-start space-y-5 text-slate-700 leading-relaxed'>
+        <p class="leading-7  text-slate-700">
+          This company with a legacy of offering finest home interiors in India for the past 10 years is the choice of a growing number of clients. 
+          Sreeja Interiors combines innovation, freshness and life into interior designing and execution. 
+          With a telling presence as the best interior designers in Andhra Pradesh we have completed more than 100+ projects in various locations in AP till date. 
+          We design, produce and implement premium home interiors to the satisfaction of clients. 
+          Thus, transform the bare space in an apartment to an amazingly modern, fresh and trending home quality and consistency come first.
+          We give your home an elegant and aesthetic look as desired without compromising quality. 
+          We create living-worthy living spaces that truly reflect your tastes, needs, and lifestyle.  
+          Our Sreeja interior design services have managed to transform several residential and commercial spaces into gorgeously styled, high-utility spaces.
+        </p>
+        <p class="leading-7  text-slate-700">
+          Our journey began with a vision to bring craftsmanship, innovation, and timeless design to Indian homes, and today, we stand as one of the fastest-growing and most trusted name in Andhra Pradesh.
+        </p>
       </div>
-      <div class='grid grid-cols-2 gap-4'>
-        <img src='images/img3.jpeg' class='rounded-xl shadow' alt='About collage 1'/>
-        <img src='images/img5.jpeg' class='rounded-xl shadow' alt='About collage 2'/>
-        <img src='images/img2.jpeg' class='rounded-xl shadow col-span-2' alt='About collage wide'/>
+        
+      <div class="grid grid-cols-2  gap-2 [grid-auto-rows:10px]">
+        <figure class="relative overflow-hidden shadow row-[span_20/span_20] lg:row-[span_12/span_12]">
+          <img src="images/work.jpeg" alt="Modular Kitchen 1" class="w-full h-full object-cover block">
+        </figure>
+
+        <figure class="overflow-hidden shadow row-[span_15/span_15] lg:row-[span_10/span_10]">
+          <img src="images/work1.jpeg" alt="Modular Kitchen 2" class="w-full h-full object-cover block">
+        </figure>
+
+        <figure class="overflow-hidden shadow row-[span_20/span_20] lg:row-[span_12/span_12] ">
+          <img src="images/work4.jpeg" alt="Modular Kitchen 3" class="w-full h-full object-cover block">
+        </figure>
+
+        <figure class="overflow-hidden shadow row-[span_15/span_15] lg:row-[span_10/span_10] mt-1">
+          <img src="images/work14.jpeg" alt="Modular Kitchen 4" class="w-full h-full object-cover block">
+        </figure>
       </div>
     </div>
+    <div class='self-start mt-4 text-slate-700 leading-relaxed'>
+        <p class="leading-7 space-y-5 text-slate-700">
+          At Sreeja interiors, we live our Mission to create smooth, aesthetic& functional designs for spaces that matter to you. 
+          Our competent team of interior designers has required design skill & intelligence to turn your ordinary space into an extraordinary one. 
+          Our unmatched interior designing services are available in AP We are meticulously trained professional having a core emphasis on the visual appeal and practical aspects of any interiors our designers are highly enthusiastic and work hard to achieve maximum client satisfaction at the minimum possible costs.
+        </p>
+      </div>
   </div>
 </main>
 
   <footer class="brand-purple text-white py-8 mt-16">
     <div class="max-w-[1600px] mx-auto px-4 md:px-6 lg:px-8 text-center space-y-4">
-      <!-- Social icons row -->
+
       <div class="flex items-center justify-center gap-6">
-        <!-- Instagram -->
         <a href="https://www.instagram.com/sreeja_constructions_interiors?igsh=NnFnNzY1eThzbHU2" aria-label="Instagram" class="opacity-90 hover:opacity-100 transition" target="_blank" rel="noopener">
           <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
             <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5a5.5 5.5 0 1 1 0 11.001A5.5 5.5 0 0 1 12 7.5zm0 2a3.5 3.5 0 1 0 0 7.001 3.5 3.5 0 0 0 0-7.001zM17.75 6.5a1.25 1.25 0 1 1 0 2.501 1.25 1.25 0 0 1 0-2.501z"/>
           </svg>
         </a>
 
-        <!-- Twitter (X) -->
         <a href="#" aria-label="Twitter" class="opacity-90 hover:opacity-100 transition" target="_blank" rel="noopener">
           <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
             <path d="M3 3h4.6l5.2 7.2L18.8 3H22l-7.7 10.4L22 21h-4.6l-5.4-7.5L8.2 21H3l7.8-10.6L3 3z"/>
           </svg>
         </a>
 
-        <!-- Facebook -->
         <a href="#" aria-label="Facebook" class="opacity-90 hover:opacity-100 transition" target="_blank" rel="noopener">
           <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
             <path d="M22 12.06C22 6.55 17.52 2 12 2S2 6.55 2 12.06c0 4.99 3.66 9.14 8.44 9.94v-7.03H8.4v-2.9h2.04V9.84c0-2.02 1.2-3.14 3.04-3.14.88 0 1.8.16 1.8.16v1.98h-1.01c-1 0-1.31.62-1.31 1.26v1.52h2.23l-.36 2.9h-1.87V22c4.78-.8 8.44-4.95 8.44-9.94z"/>
